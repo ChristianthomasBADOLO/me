@@ -5,7 +5,7 @@
  * ---------------------------------------------------------------- */
 :root {
     /* Theme colors */
-    --primary: #176B87;
+    --primary: #17576d;
     --primary-rgb: 23, 107, 135;    
     --secondary: #64CCC5;
     --secondary-rgb: 100, 204, 197;    
@@ -1010,7 +1010,7 @@ h6, .h6 {
     right: calc(-1 * var(--sidebar-width));
     bottom: 0;
     width: var(--sidebar-width);
-    background: linear-gradient(135deg, #17576d 0%, #0c3b4a 100%);
+    background:  #17576d;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -1032,7 +1032,7 @@ h6, .h6 {
 }
 
 .logo {
-    width: 100px;
+    width: 170px;
     margin-bottom: 20px;
 }
 
