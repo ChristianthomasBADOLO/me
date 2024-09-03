@@ -32,8 +32,8 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
 
 </head>
-<body>
-
+<body data-theme="dark">
+    
     <!-- Page loader -->
     <div id="loader">
         <div id="loader_bar"></div>
@@ -46,23 +46,32 @@
         <aside id="sidebar">
             <div class="sidebar-header">
                 <a href="index.html" aria-label="Logo">
-                    <img src="images/logos/logo.png" alt="">
+                    <img src="images/logos/logo.png" alt="" class="logo">
                 </a>
+                <div class="user-info">
+                    <img src="images/logos/logo.png" alt="User Avatar" class="user-avatar">
+                    <div class="user-details">
+                        <h3>PORTFOLIO</h3>
+                        <h2>Christian Thomas BADOLO</h2>
+                    </div>
+                </div>
                 <a href="javascript:void(0);" role="button" id="sidebar_close">&times;</a>
             </div>
             <div class="sidebar-body">
                 <nav class="navbar">
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Academic Journey</a></li>
-                        <li><a href="#certificate">Certifications</a></li>
-                        <li><a href="#portfolio">Projects</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Academic Journey</a></li>
+                        <li><a href="index.html#certificate">Certifications</a></li>
+                        <li><a href="index.html#portfolio">Projects</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="sidebar-footer">
+                <button class="start-button">Let's connect!</button>
+                <p>Exploring opportunities and collaborations</p>
                 <ul class="social unlist">
                     <li>
                         <a href="https://www.linkedin.com/in/christianthomasbadolo/" aria-label="Linkedin">
@@ -94,7 +103,7 @@
                     <!-- ========================= -->
                     <!--   Start:: theme setting   -->
                     <!-- ========================= -->
-                    <div class="setting">
+                    <!-- <div class="setting">
                         <input type="checkbox" id="theme">
                         <label for="theme">
                             <svg width="24" height="24" id="light" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +114,7 @@
                             </svg>
                             <span class="hidden">Change theme</span>
                         </label>
-                    </div>
+                    </div> -->
                     <!-- ========================= -->
                     <!--    End:: theme setting    -->
                     <!-- ========================= -->
@@ -118,6 +127,8 @@
 
             <!-- Start:: intro section -->
             <section id="intro">
+                <!-- Particules js -->
+                <div id="particles-js"></div>
                 <div class="container relative">
                     <img src="images/shapes/stars.svg" class="shape shape--3" data-animate="fade-right" alt="">
                     <div class="row">
@@ -665,5 +676,7 @@
     <!-- Scripts -->
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particule.js"></script>
 </body>
 </html>

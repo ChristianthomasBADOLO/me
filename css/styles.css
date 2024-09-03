@@ -1,30 +1,3 @@
-/**
- *
- * Template name: 
- * Template url: http://kri8thm.in/html/solosuter/theme
- * Author: Kri8thm (kri8thm.in) <kri8thm@gmail.com>
- * Version: 1.0.0
- * Written by: Kri8thm
- * ---------------------------------------------------------------- */
-
-/**
- * Table of contents
- *
- * 01. CSS Variables
- * 02. Dark Styles
- * 03. Reboot CSS
- * 04. Typography
- * 05. Spacing
- * 06. Grid System
- * 07. Components
- * 08. Core Styles
- * 09. Homepage
- * 10. Footer Styles
- * 11. Animation
- * 12. Responsive Styles
- *
- */
-
 
 /** 
  *
@@ -88,8 +61,6 @@
     --btn-icon-bg: transparent;
     --btn-icon-color: transparent;
 
-    --sidebar-width: 280px;
-
     /* Swiper slider config */
     --swiper-pagination-bullet-inactive-opacity: 0.15;
     --swiper-pagination-color: var(--primary);
@@ -100,7 +71,13 @@
     --animation-name: ;
 }
 
-
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+}
 /** 
  *
  * 02. Dark Styles
@@ -1032,26 +1009,58 @@ h6, .h6 {
     top: 0;
     right: calc(-1 * var(--sidebar-width));
     bottom: 0;
-    background-color: var(--primary);
     width: var(--sidebar-width);
-    padding: 64px 24px 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    text-align: center;
+    background: linear-gradient(135deg, #17576d 0%, #0c3b4a 100%);
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     z-index: 100;
-    -webkit-transition: all 0.25s;
-    -o-transition: all 0.25s;
     transition: all 0.25s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 #sidebar.show {
     right: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-details h3 {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.user-details h2 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
 }
 
 #sidebar_close {
@@ -1065,23 +1074,146 @@ h6, .h6 {
     display: block;
     width: 32px;
     height: 32px;
-    border-radius: 24px;
-    background-color: rgba(var(--dark-rgb), 0.5);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sidebar_close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-body {
-    padding: 24px 0;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
     flex: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    overflow-y: auto;
 }
 
+.navbar h4 {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin-bottom: 10px;
+}
+
+.navbar ul li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar ul li a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.start-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.start-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-footer p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+
+.social.unlist {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.social.unlist li {
+    margin: 0 10px;
+}
+
+.social.unlist li a {
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+.social.unlist li a:hover {
+    opacity: 0.7;
+}
+
+.social.unlist li a svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 1320px) {
+    #sidebar {
+        top: 32px;
+        left: 32px;
+        right: auto;
+        bottom: 32px;
+        border-radius: 16px;
+    }
+
+    #sidebar_close {
+        display: none;
+    }
+}
+
+/* Scrollbar styles for webkit browsers */
+.sidebar-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+/* Scrollbar styles for Firefox */
+.sidebar-body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+}
 .navbar {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -1093,10 +1225,6 @@ h6, .h6 {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.navbar ul li:not(:first-child) {
-    margin-top: 24px;
 }
 
 .social li a,
@@ -2835,7 +2963,7 @@ h6, .h6 {
     }
 
     .shape.shape--1 {
-        left: -56px;
+        left: 30px;
     }
 
     .shape.shape--5 {
