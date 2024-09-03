@@ -30,6 +30,7 @@
     <!-- Styles -->
     <link href="css/plugins.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/categorie.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -120,11 +121,24 @@
             <section id="intro1">
                 <div class="container">
                     <div class="page-container page-head mb-64">
-                        <h1>Recent works </h1>
-                        <p>A snapshot of my recent achievements. </p>
+                        <h1>Recent works</h1>
+                        <p>A snapshot of my recent achievements.</p>
                     </div>
+                    
+                    <!-- Category buttons -->
+                    <div class="category-buttons mb-32">
+                        <button class="category-btn active" data-category="all">All</button>
+                        <button class="category-btn" data-category="intrapreneurship">Intrapreneurship</button>
+                        <button class="category-btn" data-category="web-development">Web Development</button>
+                        <button class="category-btn" data-category="scientific-project">Scientific Project</button>
+                        <button class="category-btn" data-category="simulation">Simulation</button>
+                        <button class="category-btn" data-category="optimization">Optimization</button>
+                        <button class="category-btn" data-category="ci-cd">CI/CD</button>
+                        <button class="category-btn" data-category="machine-learning">Machine Learning</button>
+                    </div>
+                    
                     <div class="row card-list mb-48">
-                        <div class="card">
+                        <div class="card" data-category="intrapreneurship">
                             <a href="https://github.com/debad1/GreenVoice" class="card__cover" aria-labelledby="portfolio_card_1">
                                 <img src="images\hero\greenvoice.png" alt="">
                             </a>
@@ -133,7 +147,7 @@
                                 <a href="https://github.com/debad1/GreenVoice" class="underline-animation">GreenVoice</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card" data-category="web-development">
                             <a href="https://test-sp-ba5ad.web.app/soutien-scolaire/6-eme_mathematiques" class="card__cover" aria-labelledby="portfolio_card_2">
                                 <img src="images\hero\smartprof.png" alt="">
                             </a>
@@ -142,82 +156,73 @@
                                 <a href="https://test-sp-ba5ad.web.app/soutien-scolaire/6-eme_mathematiques" class="underline-animation">Search Engine</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <a href="https://github.com/debad1/Predictive-maintenance-with-optimal-transport" class="card__cover" aria-labelledby="portfolio_card_2">
+                        <div class="card" data-category="scientific-project">
+                            <a href="https://github.com/debad1/Predictive-maintenance-with-optimal-transport" class="card__cover" aria-labelledby="portfolio_card_3">
                                 <img src="images\hero\optimal_transport.png" alt="">
                             </a>
                             <span class="card__subtitle">Scientific project</span>
-                            <div id="portfolio_card_2" class="h5 mb-0">
+                            <div id="portfolio_card_3" class="h5 mb-0">
                                 <a href="https://github.com/debad1/Predictive-maintenance-with-optimal-transport" class="underline-animation">Predictive maintenance with optimal transport</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <a href="https://github.com/debad1/Simulation-of-a-blood-supply-chain" class="card__cover" aria-labelledby="portfolio_card_3">
+                        <div class="card" data-category="simulation">
+                            <a href="https://github.com/debad1/Simulation-of-a-blood-supply-chain" class="card__cover" aria-labelledby="portfolio_card_4">
                                 <img src="images\hero\simulation.png" alt="">
                             </a>
                             <span class="card__subtitle">Simulation</span>
-                            <div id="portfolio_card_3" class="h5 mb-0">
+                            <div id="portfolio_card_4" class="h5 mb-0">
                                 <a href="https://github.com/debad1/Simulation-of-a-blood-supply-chain" class="underline-animation">Simulation of a blood supply chain</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <a href="https://github.com/debad1/network_centralities" class="card__cover" aria-labelledby="portfolio_card_4">
+                        <div class="card" data-category="optimization">
+                            <a href="https://github.com/debad1/network_centralities" class="card__cover" aria-labelledby="portfolio_card_5">
                                 <img src="images\hero\colab.png" alt="">
                             </a>
                             <span class="card__subtitle">Optimization</span>
-                            <div id="portfolio_card_4" class="h5 mb-0">
+                            <div id="portfolio_card_5" class="h5 mb-0">
                                 <a href="https://github.com/debad1/network_centralities" class="underline-animation">Network centralities</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <a href="https://github.com/debad1/mlops_monitoring" class="card__cover" aria-labelledby="portfolio_card_5">
+                        <div class="card" data-category="ci-cd">
+                            <a href="https://github.com/debad1/mlops_monitoring" class="card__cover" aria-labelledby="portfolio_card_6">
                                 <img src="images\hero\api.png" alt="">
                             </a>
-                            <span class="card__subtitle">CI/CD </span>
-                            <div id="portfolio_card_5" class="h5 mb-0">
+                            <span class="card__subtitle">CI/CD</span>
+                            <div id="portfolio_card_6" class="h5 mb-0">
                                 <a href="https://github.com/debad1/mlops_monitoring" class="underline-animation">API monitoring</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <a href="https://github.com/debad1/plbd" class="card__cover" aria-labelledby="portfolio_card_6">
+                        <div class="card" data-category="intrapreneurship">
+                            <a href="https://github.com/debad1/plbd" class="card__cover" aria-labelledby="portfolio_card_7">
                                 <img src="images\hero\plbd.png" alt="">
                             </a>
                             <span class="card__subtitle">Projet Learning by Doing</span>
-                            <div id="portfolio_card_6" class="h5 mb-0">
+                            <div id="portfolio_card_7" class="h5 mb-0">
                                 <a href="https://github.com/debad1/plbd" class="underline-animation">SmartRamp</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <a href="https://github.com/debad1/Optimisation-de-la-composition-de-portefeuille-d-actifs" class="card__cover" aria-labelledby="portfolio_card_7">
+                        <div class="card" data-category="optimization">
+                            <a href="https://github.com/debad1/Optimisation-de-la-composition-de-portefeuille-d-actifs" class="card__cover" aria-labelledby="portfolio_card_8">
                                 <img src="images\hero\colab.png" alt="">
                             </a>
                             <span class="card__subtitle">Optimization</span>
-                            <div id="portfolio_card_7" class="h5 mb-0">
+                            <div id="portfolio_card_8" class="h5 mb-0">
                                 <a href="https://github.com/debad1/Optimisation-de-la-composition-de-portefeuille-d-actifs" class="underline-animation">Optimisation de portefeuil d'actifs</a>
                             </div>
                         </div>
-                        <div class="card">
-                            <a href="https://github.com/debad1/Movies_recommander_systems" class="card__cover" aria-labelledby="portfolio_card_8">
+                        <div class="card" data-category="machine-learning">
+                            <a href="https://github.com/debad1/Movies_recommander_systems" class="card__cover" aria-labelledby="portfolio_card_9">
                                 <img src="images\hero\colab.png" alt="">
                             </a>
                             <span class="card__subtitle">Machine learning</span>
-                            <div id="portfolio_card_8" class="h5 mb-0">
+                            <div id="portfolio_card_9" class="h5 mb-0">
                                 <a href="https://github.com/debad1/Movies_recommander_systems" class="underline-animation">Movie recommender systems</a>
                             </div>
                         </div>
                     </div>
-                    <div class="page-foot">
-                        <a href="#" class="btn btn--primary">
-                            <span>Load More</span>
-                            <span class="btn__icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill="currentColor" d="M12 4C9.4095 4 7.10606 5.23053 5.64274 7.14274L8 9.5H2V3.5L4.21863 5.71863C6.05061 3.452 8.85558 2 12 2 17.5228 2 22 6.47715 22 12H20C20 7.58172 16.4183 4 12 4ZM4 12C4 16.4183 7.58172 20 12 20 14.5905 20 16.894 18.7695 18.3573 16.8573L16 14.5 22 14.5V20.5L19.7814 18.2814C17.9494 20.548 15.1444 22 12 22 6.47715 22 2 17.5228 2 12H4Z" />
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
                 </div>
             </section>
+            <!-- End:: intro section -->
             <!-- End:: intro section -->
 
             <!-- Start:: footer -->
@@ -257,5 +262,6 @@
     <!-- Scripts -->
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/categorie.js"></script>
 </body>
 </html>
