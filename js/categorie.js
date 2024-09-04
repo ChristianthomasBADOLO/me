@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Filter cards
             cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.classList.remove('hidden');
+                if (category === 'all' || card.dataset.category.split(' ').includes(category)) {
+                    card.style.display = '';
                 } else {
-                    card.classList.add('hidden');
+                    card.style.display = 'none';
                 }
             });
         });
