@@ -61,6 +61,8 @@
     --btn-icon-bg: transparent;
     --btn-icon-color: transparent;
 
+    --sidebar-width: 280px;
+
     /* Swiper slider config */
     --swiper-pagination-bullet-inactive-opacity: 0.15;
     --swiper-pagination-color: var(--primary);
